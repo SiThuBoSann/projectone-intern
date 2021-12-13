@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+	font-family: Poppins;
+}
+nav{
+    background: white;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+label.logo{
+    line-height: 80px;
+    padding: 0 50px;
+}
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    transition: all .5s;
+    font-weight: bold;
+    color: #111;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/*home*/
+.home{
+    background: url(img/slider1.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    height: 100vh;
+    width: 100%;
+    animation: animate 30s infinite;
+}
+@keyframes animate{
+    20%{
+        background: url(img/slider2.jpg);
+        background-size: cover;
+    }
+    40%{
+        background: url(img/slider3.jpg);
+        background-size: cover;
+    }
+    60%{
+        background: url(img/slider4.jpg);
+        background-size: cover;
+    }
+    80%{
+        background: url(img/slider5.jpg);
+        background-size: cover;
+    }
+    100%{
+        background: url(img/slider1.jpg);
+        background-size: cover;
+    }
+}
+/*about*/
+.about{
+    background: mintcream;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about .image{
+    flex:1 1 10rem;
+}
+.about .image img{
+    height:70vh;
+    width:100%;
+}
+.about .aboutcontent{
+    flex:1 1 30rem;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.about .aboutcontent h1{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: midnightblue;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 3rem;
+    font-family: 'Times New Roman';
+}
+.about .aboutcontent h1::after{
+    content: "";
+    height: 2px;
+    width: 100px;
+    background-color: midnightblue;
+    display: block;
+    margin: auto;
+}
+.about .aboutcontent h3{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: dodgerblue;
+    font-family: 'Times New Roman';
+}
+.about .aboutcontent p{
+    color: black;
+    padding:1rem 0;
+    font-size: 1.5rem;
+    line-height: 30px;
+    font-family: 'Dongle', sans-serif;
+}
+/*subabout*/
+.subabout{
+    background: mintcream;
+    padding: .5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.subabout .image{
+    flex:1 1 10rem;
+}
+.subabout .image img{
+    height:90vh;
+    width:100%;
+}
+.subabout .subaboutcontent{
+    flex:1 1 30rem;
+    padding-top: 30px;
+    padding-right: 50px;
+
+}
+.subabout .subaboutcontent h3{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: dodgerblue;
+    font-family: 'Times New Roman';
+}
+.subabout .subaboutcontent p{
+    color: black;
+    padding:1rem 0;
+    font-size: 1.5rem;
+    line-height: 30px;
+    font-family: 'Dongle', sans-serif;
+}
+/*services*/
+.services{
+    background: mintcream;
+    padding: 3rem 0;
+}
+.services h1{
+    text-align: center;
+    color: midnightblue;
+    font-family: 'Times New Roman';
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 3rem;
+    font-weight: bold;
+}
+.services h1::after{
+    content: "";
+    height: 2px;
+    width: 100px;
+    background-color: midnightblue;
+    display: block;
+    margin: auto;
+}
+.services .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.services .box-container .box{
+    height:25rem;
+    width:18rem;
+    background:mintcream;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
+    margin: 1rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+.services .box-container .box img{
+    height:10rem;
+    width:10rem;
+    margin:2rem 0;
+    transition: .5s ease-in-out;
+}
+.services .box-container .box h3{
+    font-size: 1.3rem;
+    letter-spacing: 0.1px;
+    color: brown;
+    transition: .5s ease-in-out;
+}
+
+.services .box-container .box p{
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+    padding: .8rem 1rem;
+    color: rgb(24,26,27);
+    text-align: left;
+}
+.services .box-container .box:hover img{
+    height: 10.5rem;
+    width: 10.5rem;
+}
+.services .box-container .box:hover h3{
+    color: dodgerblue;
+    text-decoration: underline;
+}
+/*projects*/
+.projects{
+    background: mintcream;
+    padding: 3rem 0;
+    text-align: center;
+}
+.projects h1{
+    text-align: center;
+    color: midnightblue;
+    font-family: 'Times New Roman';
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 3rem;
+    font-weight: bold;
+}
+.projects h1::after{
+    content: "";
+    height: 2px;
+    width: 100px;
+    background-color: midnightblue;
+    display: block;
+    margin: auto;
+}
+.projects .card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+.projects .card-container .card{
+    margin: 2rem;
+    text-align: center;
+    width: 16rem;
+    height: 25rem;
+    cursor: pointer;
+}
+.projects .card-container .card img{
+    height:25rem;
+    width:100%;
+    object-fit: cover;
+}
+.projects .card-container .card h3{
+    display: none;
+}
+.projects .card-container .card:hover h3{
+    color: dodgerblue;
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding:.5rem 0;
+    text-decoration: underline;
+}
+
+/*contactus*/
+.contactus{
+    background: mintcream;
+    padding: 3rem 0;
+}
+.contactus h1{
+    text-align: center;
+    color: midnightblue;
+    font-family: 'Times New Roman';
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 3rem;
+    font-weight: bold;
+}
+.contactus h1::after{
+    content: "";
+    height: 2px;
+    width: 100px;
+    background-color: midnightblue;
+    display: block;
+    margin: auto;
+}
+.contactus .row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contactus .row form{
+    flex:1 1 50rem;
+    background:mintcream;
+    padding: 0rem 3rem 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+    align-items: flex-start;
+}
+.contactus .row form .box{
+    height:3rem;
+    width:49%;
+    border:.1rem solid black;
+    padding:0 1rem;
+    margin:1rem 0;
+    font-size: 1.1rem;
+    color:black;
+    background:none;
+    text-transform: none;
+}
+.contactus .row form .address{
+    height:10rem;
+    padding:1rem;
+    resize: none;
+    width:100%;
+}
+.contactus .send{
+    text-align: center;
+}
+.contactus .contactbtn{
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    background: mintcream;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    letter-spacing: .25rem;
+}
+.contactus .contactbtn:hover{
+    font-size: 1.25rem;
+    background: mistyrose;
+}
+.contactus .map{
+    width: 100%;
+    height: 80vh;
+}
+
+
+
+/*footer*/
+.footer{
+    background: mintcream;
+}
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    margin:1.5rem;
+    flex:1 1 20rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 1.2rem;
+    color:midnightblue;
+    padding:1rem 0;
+}
+.footer .box-container .box h3:after{
+    content: "";
+    height: 1px;
+    width: 50px;
+    background-color: midnightblue;
+    display: block;
+    margin-right: auto;
+}
+
+.footer .box-container .box p{
+    font-size: .85rem;
+    color:black;
+    padding:.7rem 0;
+}
+
+.footer .box-container .box p i{
+    padding-right: .5rem;
+    color:dodgerblue;
+}
+
+.footer .credit{
+    padding:2rem 1rem;
+    font-size: 1rem;
+    color:#111;
+    background:#fff;
+    text-align: center;
+}
+
+
+
+/*special*/
+@media (max-width: 1100px){
+    .footer .box-container .box{
+        flex:1 1 10rem;
+    }
+}
+
+/*media*/
+@media (max-width:  925px){
+    label.logo{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .home{
+        height: 70vh;
+        width: 100%;
+    }
+    .about{
+        padding: 3rem 10px;
+    }
+    .about .image img{
+        height: 80vh;
+        width: 100%;
+    }
+    .about .aboutcontent{
+        padding-right: 20px;
+    }
+    .subabout{
+        padding: 3rem 0;
+    }
+    .subabout .subaboutcontent{
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+    .services .box-container .box{
+        height:24rem;
+        width:20rem;
+        margin: 2rem;
+    }
+    .contactus .row form{
+        margin-top: 1rem;
+    }  
+    .footer .box-container .box{
+        flex:1 1 30rem;
+    }
+}
+
+/*tablet*/
+@media (max-width: 800px){
+    label.logo{
+        padding-left: 0;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: mintcream;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 1s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: dodgerblue;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .home{
+        height: 60vh;
+        width: 100%;
+    }
+    .about{
+        padding: 3rem .5rem;
+    }
+    .about .image{
+        flex:1 1 20rem;
+    }
+    .about .aboutcontent{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .about .aboutcontent h1{
+        font-size: 2.5rem;
+    }
+    .about .aboutcontent h3{
+        font-size: 2rem;
+    }
+    .about .aboutcontent p{
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .subabout{
+        padding: 3rem .5rem;
+    }
+    .subabout .image{
+        flex:1 1 20rem;
+    }
+    .subabout .subaboutcontent{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .subabout .subaboutcontent h3{
+        font-size: 2rem;
+    }
+    .subabout .subaboutcontent p{
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .services .box-container .box{
+        height:24rem;
+        width:20rem;
+    }
+    .services .box-container .box h3{
+        font-size: 1.4rem;
+    }
+    .services .box-container .box p{
+        font-size: 1.1rem;
+        padding-left: 1rem;
+    }
+    .contactus .row form{
+        margin-top: 1rem;
+    }  
+    .footer .box-container .box{
+        flex:1 1 25rem;
+    }
+}
+
+/*phone*/
+@media (max-width: 576px){
+    .home{
+        height: 50vh;
+        width: 100%;
+    }
+    .about{
+        padding: 3rem 0;
+    }
+    .about .image img{
+        height:50vh;
+        width:100%;
+    }
+    .about .aboutcontent{
+        padding-top: 20px;
+        padding-left: 25px;
+        padding-right: 20px;
+    }
+    .about .aboutcontent h1{
+        font-size: 1.5rem;
+    }
+    .services h1{
+        font-size: 1.5rem;
+    }
+    .projects h1{
+        font-size: 1.5rem;
+    }
+    .contactus h1{
+        font-size: 1.5rem;
+    }
+    .about .aboutcontent h3{
+        font-size: 1.2rem;
+    }
+    .about .aboutcontent p{
+        font-size: 1.3rem;
+        line-height: 40px;
+    }
+    .subabout{
+        padding: 2rem 0;
+    }
+    .subabout .image img{
+        height: 50vh;
+        width: 100%;
+    }
+    .subabout .subaboutcontent{
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    .subabout .subaboutcontent h3{
+        font-size: 1.2rem;
+    }
+    .subabout .subaboutcontent p{
+        font-size: 1.3rem;
+        line-height: 40px;
+    }
+    .services .box-container .box{
+        height:23rem;
+        width:22rem;
+        margin: 1.5rem;
+        padding: .5rem;
+    }
+    .services .box-container .box h3{
+        font-size: 1.2rem;
+    }
+    .services .box-container .box p{
+        font-size: .9rem;
+        padding-left: 2rem;
+    }
+    .contactus .row form{
+        margin-top: 1rem;
+        flex:1 1 70rem;
+    }  
+    .contactus .row form .box{
+        height:2.5rem;
+        width:100%;
+        font-size: .95rem;
+    }
+    .contactus .row form .address{
+        height: 12rem;
+    }
+    .contactus .contactbtn{
+        font-size: 1rem;
+    }
+    .contactus .contactbtn:hover{
+        font-size: 1.1rem;
+    }
+    .contactus .map{
+        height: 70vh;
+    }
+    .footer .credit{
+        font-size: .7rem;
+    } 
+    .footer .box-container .box h3{
+        font-size: 1rem;
+    }
+    .footer .box-container .box p{
+        font-size: .75rem;
+    }
+}
